@@ -5,7 +5,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-    <br><br>
+    
     {% if user.id == album.author.id %}
         <h1 style="animation: flicker 2.7s infinite alternate; font-family: 'Pacifico';">
             {{ album.title }} 

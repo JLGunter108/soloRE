@@ -36,19 +36,15 @@
 </head>
 <body style="background-color:rgb(21, 21, 21); background-image: url('https://i.imgur.com/ilAQEm3.gif?noredirect'); background-size: 100%, 100%; background-position: fixed; background-repeat: no-repeat;  font-family: 'Pacifico';">
     <main>
-        <footer class="d-flex justify-content-between">
-                <img style="height: 25rem; max-width:25rem; margin:15px; border-radius:10px; box-shadow: -1px -1px 1px #d5d87d, 1px -1px 1px #b1d4b6, -1px 1px 1px #fa7785, 1px 1px 1px #53cbbf;" src="" id="cat_image1">
-                <img style="height: 25rem; max-width:25rem; margin:15px; border-radius:10px; box-shadow: -1px -1px 1px #d5d87d, 1px -1px 1px #b1d4b6, -1px 1px 1px #fa7785, 1px 1px 1px #53cbbf;" src="" id="cat_image2">
-    
-        </footer>
+        <br /><br /><br /><br /><br />
         <div class="text-center">
             <br><br>
             <h1 style="animation: redflicker 1.5s infinite alternate;">soloGram</h1>
-            <p>Share your memories!</p>
+            <p class="text-white-50">Share your memories!</p>
             {% if not user.is_authenticated %}
-            <a class="btn btn-outline-light" href="{% url 'login' %}">Log in</a>
+            <a class="btn btn-outline-light text-white-50" href="{% url 'login' %}">Log in</a>
             {% else %}
-            <a class="btn btn-outline-light" href="{% url 'home' %}">Home</a>
+            <a class="btn btn-outline-light text-white-50" href="{% url 'home' %}">Home</a>
             {% endif %}
         </div>
     </main>
