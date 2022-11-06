@@ -32,7 +32,7 @@ class Post(models.Model):
     description = models.TextField()
     file = models.ImageField(null=True, blank=False, upload_to='images/')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='post')
-    likes = models. ManyToManyField(User, related_name='post_likes')
+    likes = models.ManyToManyField(User, related_name='post_likes')
     posted_on = models.DateField(auto_now_add=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

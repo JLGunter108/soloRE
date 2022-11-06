@@ -6,7 +6,7 @@
 {% block content %}
 
     {% if user.is_authenticated %}
-    <h1 style="animation: pulse 15s infinite alternate; font-family: 'Pacifico';">{{ user.first_name }} {{ user.last_name }}</h1>
+    <h1 style="animation: pulse 15s infinite alternate; font-family: 'Pacifico';">{{ user.first_name }} {{ user.last_name }}</h1><br>
         {% if request.user.id == user.id %}
             {% if request.user.profile %}
                 <a style="animation: pulse 2.3s infinite alternate; font-family: 'Pacifico';" class="btn btn-outline" href="{% url 'edit_profile' user.id %}">Edit Profile</a><br><br>
@@ -26,6 +26,7 @@
             {% endfor %}
             <br><a style="animation: redflicker 1.6s infinite alternate; font-family: 'Pacifico';" class="btn btn-outline-light" href="{% url 'albumCreate' %}">New Album</a><br>
         {% endif %}
+        <h4 style="animation: flicker 2.7s infinite alternate; font-family: 'Pacifico';">Photos</h4>
         {% for post in user.post.all %}
             <br>
             <a href="{% url 'post-details' post.pk %}"><img class="rounded" style="max-width: 100%;" src="{{ post.file.url }}" alt="post image"></a>
